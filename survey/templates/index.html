@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'survery.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dojo Survery Index</h1>
+    <h3>Create a User</h3>
+    <div class="container">
+        <form action='/users' method='post'>
+                {% csrf_token %}
+            <div class="form_group">
+                Name: <input type='text' name='form_name'>
+            </div>
+            <div class="location">
+                <label for="location">Location:</label>
+                <select id="location" name="form_location">
+                    <option value="Chicago">Chicago</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Austin">Austin</option>
+                </select>
+            </div>
+            <label for="language">Languages</label>
+            <select id="language" name="form_language">
+                <option value="Python">Python</option>
+                <option value="MERN">MERN</option>
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+            </select>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" label class="form-label">Comments(optional)</label>
+        <textarea class="form-control" name= "form_comments"
+            id="exampleFormControlTextarea1" rows="3">
+
+        </textarea>
+    </div>
+    <button type='submit'>Submit</button>
+    </form>
+    </div>
+</body>
+
+</html>

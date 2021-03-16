@@ -1,0 +1,22 @@
+.container{
+    margin-top: 30px;
+    width: 500px;
+    height: 500px;
+    border: black 5px solid;
+}
+.name{
+    margin:5px;
+}
+.locations{
+    margin:5px;
+}
+.language{
+    margin:5px;
+}
+.mb-5{
+    margin:5px;
+}
+button{
+    background-color: darkblue;
+    color: cornflowerblue;
+}
